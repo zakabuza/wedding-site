@@ -1,0 +1,282 @@
+/* Basic default CSS */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 100%;
+}
+
+/* Grid Container */
+.grid-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Header Container */
+.header-container {
+    width: 100vw;
+}
+
+.navigation-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: #85343d;
+    color: #BE923B;
+}
+
+.nav-brand-toggle {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+}
+
+.wed-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.8rem;
+}
+
+.wed-logo .title {
+    font-size: 1.6rem;
+    font-family: 'Great Vibes', cursive;
+    margin-top: 0.3rem;
+    margin-bottom: -0.6rem;
+}
+
+.wed-logo .title i{
+    font-size: 0.8rem;
+}
+
+.wed-logo .subtitle {
+    font-size: 0.8rem;
+    margin-left: 1.2rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-toggle {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+}
+
+.nav-toggle:hover {
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.collapsed {
+    display: none;
+}
+
+.nav-menu .nav-link {
+    list-style-type: none;
+    padding: 0.4rem;
+}
+
+.nav-menu .nav-link a {
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bolder;
+}
+
+.nav-menu .nav-link a:hover {
+    text-decoration: none;
+    color: #e9d098;
+}
+
+/* Banner Container */
+.banner-container {
+    width: 100vw;
+    height: 90vh;
+    background: grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.banner-container > div:nth-child(1) {
+    color: #e9d098;
+    margin-bottom: 0.5rem;
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+}
+
+.countdown-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 2px;
+    width: 80vw;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    z-index: 1;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.countdown-container .time-box {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    background: #85343d;
+    border: #be923b;
+    color: #be923b;
+    border-radius: 0.5rem;
+}
+
+.countdown-container .time-box > span:nth-child(1) {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: -0.9rem;
+}
+
+.countdown-container .time-box > span:nth-child(2) {
+    width: 100%;
+    align-self: center;
+    text-align: center;
+    font-family: 'Alex', sans-serif;
+    font-size: 0.8rem;
+}
+
+.story-container, .location-container {
+    width: 100vw;
+    height: 100vh;
+    background: grey;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    border: 1rem solid black;
+}
+
+.add-fade-in {
+    -webkit-animation: fadein 1.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 1.5s; /* Firefox < 16 */
+    -ms-animation: fadein 1.5s; /* Internet Explorer */
+    -o-animation: fadein 1.5s; /* Opera < 12.1 */
+    animation: fadein 1.5s;
+}
+
+@media screen and (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-rows: 80px auto;
+        grid-template-columns: auto;
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .header-container {
+        grid-row: 1 / 2;
+        grid-column: 1 / 1;
+        width: 100vw;
+        z-index: 1;
+    }
+
+    .navigation-container {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 80vw;
+        margin-left: 10vw;
+        margin-right: 10vw;
+        padding-left: 1vw;
+        padding-right: 1vw;
+        background: rgba(0,0,0,0);
+    }
+
+    .banner-container {
+        grid-row: 1 / 3;
+        grid-column: 1 / 1;
+        background: #85343d;
+        height: 100vh;
+    }
+
+    .wed-logo .title {
+        font-size: 1.9rem;
+        margin-bottom: -0.7rem;
+        text-shadow: darkgrey;
+    }
+    .wed-logo .title i {
+        font-size: 1rem;
+        text-shadow: darkgrey;
+    }
+
+    .wed-logo .subtitle {
+        font-size: 1.1rem;
+    }
+
+    .nav-menu {
+        flex-direction: row;
+        justify-content: flex-start;
+        padding-top: 0.8rem;
+    }
+
+    .nav-menu .nav-link a {
+        font-size: 0.9rem;
+        text-shadow: darkgrey;
+    }
+
+    .collapsed {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+}
+
+/* Animation */
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
